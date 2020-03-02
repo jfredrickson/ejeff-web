@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Columns, Card, Content, Heading, Tag } from 'react-bulma-components/full'
+import { Columns, Card, Content, Heading, Tag } from 'react-bulma-components'
 import './ProjectCard.css'
 
 class ProjectCard extends Component {

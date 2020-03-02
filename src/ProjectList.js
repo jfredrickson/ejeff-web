@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Columns } from 'react-bulma-components/full'
+import { Columns } from 'react-bulma-components'
 import ProjectCard from './ProjectCard';
 
 class ProjectList extends Component {

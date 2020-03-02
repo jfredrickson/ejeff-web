@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container } from 'react-bulma-components/full'
+import { Container } from 'react-bulma-components'
 import './App.css'
 import ProjectList from './ProjectList'
 

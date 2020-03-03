@@ -4,7 +4,7 @@ import './ProjectCard.css'
 
 class ProjectCard extends Component {
   render() {
-    const projectImageUrl = this.props.project.imageUrl || "/assets/images/project-default.png"
+    const projectImageUrl = this.props.project.imageRef || "/assets/images/project-default.png"
     return(
       <Columns.Column size={4}>
         <Card className="project-card">

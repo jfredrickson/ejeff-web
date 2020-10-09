@@ -1,25 +1,23 @@
 import React, { Component } from 'react'
-import { Columns, Card, Content, Heading, Tag } from 'react-bulma-components'
+import { Card, Badge } from 'react-bootstrap'
 import './ProjectCard.css'
 
 class ProjectCard extends Component {
   render() {
     const projectImageUrl = this.props.project.imageRef || "/assets/images/project-default.png"
     return(
-      <Columns.Column size={4}>
-        <Card className="project-card">
-          <Card.Image size="16by9" src={projectImageUrl}/>
-          <Card.Content>
-            <Heading size={4}>{this.props.project.title}</Heading>
-            <Content>
-              <p>{this.props.project.summary}</p>
-              <Tag.Group>
-                {this.props.project.tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
-              </Tag.Group>
-            </Content>
-          </Card.Content>
+        <Card>
+          <Card.Img variant="top" src={projectImageUrl}/>
+          <Card.Body>
+            <Card.Title>{this.props.project.title}</Card.Title>
+            <Card.Text>
+              {this.props.project.summary}
+            </Card.Text>
+            <div>
+              {this.props.project.tags.map(tag => <Badge variant="light" key={tag}>{tag}</Badge>)}
+            </div>
+          </Card.Body>
         </Card>
-      </Columns.Column>
     )
   }
 }

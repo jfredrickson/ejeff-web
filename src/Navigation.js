@@ -1,51 +1,40 @@
 import React from 'react'
-import { Navbar } from 'react-bulma-components'
-import { Link } from '@reach/router'
+import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 const Navigation = () => {
   return (
-    <Navbar>
-      <Navbar.Brand>
-        <Navbar.Item>
+    <Navbar expand="sm" bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand href="/">
           Jeff Fredrickson
-        </Navbar.Item>
-      </Navbar.Brand>
-      <Navbar.Menu>
-        <Navbar.Container position="end">
-          <Navbar.Item>
-            <Link to="/">Home</Link>
-          </Navbar.Item>
-          <Navbar.Item>
-            <Link to="projects">Projects</Link>
-          </Navbar.Item>
-          <Navbar.Item>
-            Contact
-          </Navbar.Item>
-          <Navbar.Item dropdown hoverable>
-            <Navbar.Link>
-              Admin
-            </Navbar.Link>
-            <Navbar.Dropdown>
-              <Navbar.Item>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbar"/>
+        <Navbar.Collapse id="nav" className="justify-content-end">
+          <Nav>
+            <Nav.Link href="/">
+              Home
+            </Nav.Link>
+            <Nav.Link href="projects">
+              Projects
+            </Nav.Link>
+            <Nav.Link href="contact">
+              Contact
+            </Nav.Link>
+            <NavDropdown title="Admin" alignRight>
+              <NavDropdown.Item href="profile">
                 Profile
-              </Navbar.Item>
-              <Navbar.Item>
-                Users
-              </Navbar.Item>
-              <Navbar.Item>
+              </NavDropdown.Item>
+              <NavDropdown.Item href="photos">
                 Photos
-              </Navbar.Item>
-              <Navbar.Item>
-                Visits
-              </Navbar.Item>
-              <Navbar.Item>
+              </NavDropdown.Item>
+              <NavDropdown.Item href="logout">
                 Logout
-              </Navbar.Item>
-            </Navbar.Dropdown>
-          </Navbar.Item>
-        </Navbar.Container>
-      </Navbar.Menu>
-      </Navbar>
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }
 

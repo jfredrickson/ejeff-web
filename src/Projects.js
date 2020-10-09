@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Columns } from 'react-bulma-components'
-import ProjectCard from './ProjectCard';
+import { CardColumns } from 'react-bootstrap'
+import ProjectCard from './ProjectCard'
 
-class ProjectList extends Component {
+class Projects extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -30,11 +30,17 @@ class ProjectList extends Component {
 
   render() {
     return(
-      <Columns multiline={true}>
-        {this.renderProjects()}
-      </Columns>
+      <>
+
+        <h1>Projects</h1>
+
+        <CardColumns>
+          {this.renderProjects()}
+        </CardColumns>
+
+      </>
     )
   }
 }
 
-export default ProjectList
+export default Projects

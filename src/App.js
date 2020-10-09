@@ -1,23 +1,27 @@
 import React, { Component } from 'react'
 import { Router } from '@reach/router'
-import 'react-bulma-components/dist/react-bulma-components.min.css'
-import { Container } from 'react-bulma-components'
-import './App.css'
+import { Container } from 'react-bootstrap'
 import Navigation from './Navigation'
 import Home from './Home'
-import ProjectList from './ProjectList'
+import Projects from './Projects'
+import Contact from './Contact'
+import Login from './Login'
+import Profile from './Profile'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container breakpoint="fullhd">
           <Navigation/>
-          <Router>
-            <Home path="/"/>
-            <ProjectList path="projects"/>
-          </Router>
-        </Container>
+          <Container className="main">
+            <Router>
+              <Home path="/"/>
+              <Projects path="projects"/>
+              <Contact path="contact"/>
+              <Login path="login"/>
+              <Profile path="profile"/>
+            </Router>
+          </Container>
       </div>
     );
   }

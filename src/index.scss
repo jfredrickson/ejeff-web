@@ -1,0 +1,15 @@
+@import "./bootstrap.scss";
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+.navbar-brand {
+  font-family: $headings-font-family;
+  font-size: 1.6em;
+  text-transform: lowercase;
+}
+
+.main {
+  margin-top: 1em;
+}

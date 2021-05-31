@@ -1,4 +1,4 @@
-FROM node:carbon-alpine as build
+FROM node:fermium-alpine as build
 WORKDIR /opt/app
 COPY package*.json ./
 RUN npm install

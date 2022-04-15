@@ -7,7 +7,7 @@ const Contact = () => {
   const [message, setMessage] = useState("")
   const [disableSend, setDisableSend] = useState(false)
   const [alertMessage, setAlertMessage] = useState("")
-  const [alertVariant, setAlertVariant] = useState()
+  const [alertVariant, setAlertVariant] = useState("")
 
   /**
   * Basic email address format sanity check, matching most of RFC2822.
@@ -20,8 +20,8 @@ const Contact = () => {
   const send = (event) => {
     event.preventDefault()
     setDisableSend(true)
-    setAlertMessage()
-    setAlertVariant()
+    setAlertMessage("")
+    setAlertVariant("")
 
     if (!name || !email || !message) {
       setDisableSend(false)

@@ -6,7 +6,7 @@ class ProjectCard extends Component {
   render() {
     const projectImageUrl = this.props.project.imageRef || "/assets/images/project-default.png"
     return(
-        <Card>
+        <Card className="project-card">
           <Card.Img variant="top" src={projectImageUrl}/>
           <Card.Body>
             <Card.Title>{this.props.project.title}</Card.Title>

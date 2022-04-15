@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { CardColumns } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import ProjectCard from './ProjectCard'
 
 class Projects extends Component {
@@ -23,7 +23,7 @@ class Projects extends Component {
     const projects = this.state.projects.slice()
     const projectListItems = []
     projects.forEach(project => {
-      projectListItems.push(<ProjectCard key={project._id} project={project}/>)
+      projectListItems.push(<Col><ProjectCard key={project._id} project={project}/></Col>)
     });
     return projectListItems
   }
@@ -34,9 +34,9 @@ class Projects extends Component {
 
         <h1>Projects</h1>
 
-        <CardColumns>
+        <Row xs={1} md={2} lg={3}>
           {this.renderProjects()}
-        </CardColumns>
+        </Row>
 
       </>
     )
